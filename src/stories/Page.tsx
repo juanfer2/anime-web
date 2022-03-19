@@ -70,4 +70,4 @@ export function Page() {
       </section>
     </article>
   );
-};
+}

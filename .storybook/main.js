@@ -14,20 +14,18 @@ module.exports = {
       name: '@storybook/addon-postcss',
       options: {
         postcssLoaderOptions: {
-          implementation: require('postcss'),
-        },
-      },
-    },
+          implementation: require('postcss')
+        }
+      }
+    }
   ],
   framework: '@storybook/react',
   webpackFinal: async (config) => {
-    config.module.rules.push(
-      {
-        test: /\.scss$/,
-        use: ['style-loader', 'css-loader', 'sass-loader'],
-        include: path.resolve(__dirname, '../src/styles'),
-      }
-    );
+    config.module.rules.push({
+      test: /\.scss$/,
+      use: ['style-loader', 'css-loader', 'sass-loader'],
+      include: path.resolve(__dirname, '../src/styles')
+    });
 
     return {
       ...config,

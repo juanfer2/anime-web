@@ -1,20 +1,20 @@
 import { useState } from 'react';
-import Card from './components/Card'
+import Card from './components/Card';
 import logo from './logo.svg';
 import './App.css';
 
 function App() {
-  const [count, setCount] = useState(0);
+  const [count, setCount] = useState<number>(0);
 
   return (
     <div className="App">
-      <Card/>
+      <Card />
 
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>Hello Vite + React!</p>
         <p>
-          <button type="button" onClick={() => setCount((count) => count + 1)}>
+          <button type="button" onClick={() => setCount((state) => state + 1)}>
             count is: {count}
           </button>
         </p>

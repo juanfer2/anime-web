@@ -15,7 +15,9 @@ export const useAsync = (
     });
 
     return () => {
+      /* eslint no-unused-expressions: [2, { allowShortCircuit: true }] */
       returnFunction && returnFunction();
+
       isActive = false;
     };
   }, dependencies);
