@@ -13,7 +13,8 @@
     "lint:fix": "eslint --fix",
     "prettier": "prettier --write './**/*.{js,jsx,ts,tsx}' --config ./.prettierrc",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "prepare": "husky install"
   },
   "dependencies": {
     "@apollo/client": "^3.5.10",
