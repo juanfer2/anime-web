@@ -7,6 +7,8 @@
     "build": "tsc && vite build",
     "preview": "vite preview",
     "test": "jest -env=jsdom",
+    "test:ci": "jest --ci -env=jsdom ",
+    "test:coverage": "jest -env=jsdom --coverage --watchAll",
     "lint": "eslint \"**/*.{js, jsx, ts,tsx}\"",
     "lint:fix": "eslint --fix",
     "prettier": "prettier --write './**/*.{js,jsx,ts,tsx}' --config ./.prettierrc",
