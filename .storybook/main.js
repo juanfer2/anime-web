@@ -1,17 +1,13 @@
-const path = require("path");
-
+const path = require('path');
 
 module.exports = {
-  "stories": [
-    "../src/**/**/*.stories.mdx",
-    "../src/**/**/*.stories.@(js|jsx|ts|tsx)"
+  stories: ['../src/**/**/*.stories.mdx', '../src/**/**/*.stories.@(js|jsx|ts|tsx)'],
+  addons: [
+    '@storybook/addon-links',
+    '@storybook/addon-essentials',
+    '@storybook/addon-interactions'
   ],
-  "addons": [
-    "@storybook/addon-links",
-    "@storybook/addon-essentials",
-    "@storybook/addon-interactions"
-  ],
-  "framework": "@storybook/react",
+  framework: '@storybook/react',
   webpackFinal: async (config) => {
     config.module.rules.push({
       test: /\.scss$/,
@@ -21,21 +17,19 @@ module.exports = {
 
     return {
       ...config,
-      plugins: [
-        ...config.plugins,
-      ],
+      plugins: [...config.plugins],
       resolve: {
         ...config.resolve,
         alias: {
           ...config.resolve.alias,
-          "@styles": path.resolve(__dirname, '../src/styles/'),
-          "@components": path.resolve(__dirname, '../src/components/'),
-          "@services": path.resolve(__dirname, '../src/services/__mocks__'),
-          "@pages": path.resolve(__dirname, '../pages/'),
-          "@templates": path.resolve(__dirname, '../src/templates/'),
-          "@utils": path.resolve(__dirname, '../src/utils/'),
-        },
-      },
+          '@styles': path.resolve(__dirname, '../src/styles/'),
+          '@components': path.resolve(__dirname, '../src/components/'),
+          '@services': path.resolve(__dirname, '../src/services/__mocks__'),
+          '@pages': path.resolve(__dirname, '../pages/'),
+          '@templates': path.resolve(__dirname, '../src/templates/'),
+          '@utils': path.resolve(__dirname, '../src/utils/')
+        }
+      }
     };
   }
   /*
@@ -56,4 +50,4 @@ module.exports = {
     return config
   }
   */
-}
+};

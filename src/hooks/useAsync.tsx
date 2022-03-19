@@ -1,5 +1,5 @@
-import { AxiosResponse } from "axios";
-import { useEffect } from "react";
+import { AxiosResponse } from 'axios';
+import { useEffect } from 'react';
 
 export const useAsync = (
   asyncFn: () => Promise<AxiosResponse<any, any>>,
@@ -12,11 +12,11 @@ export const useAsync = (
 
     asyncFn().then((result) => {
       if (isActive) successFunction(result.data);
-    })
-  
+    });
+
     return () => {
       returnFunction && returnFunction();
       isActive = false;
-    }
-  }, dependencies)  
-}
+    };
+  }, dependencies);
+};
