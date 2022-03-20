@@ -14,8 +14,6 @@ const buttonSizes = {
 };
 
 function Button({ children, size, type }: ButtonI) {
-  console.log(buttonSizes[size]);
-
   return (
     <Container>
       <button
