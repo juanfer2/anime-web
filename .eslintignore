@@ -5,3 +5,5 @@ vite.config.ts
 *.stories.*
 src/stories
 *spec.*
+
+tailwind.config.js

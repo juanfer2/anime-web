@@ -1,4 +1,6 @@
 import '../src/index.css';
+import theme from '@styles/theme';
+import { ThemeProvider } from 'styled-components';
 
 export const parameters = {
   actions: { argTypesRegex: '^on[A-Z].*' },
@@ -9,3 +11,13 @@ export const parameters = {
     }
   }
 };
+
+export const decorators = [
+  (Story) => (
+    <>
+      <ThemeProvider theme={theme}>
+        <Story />
+      </ThemeProvider>
+    </>
+  )
+];

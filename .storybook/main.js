@@ -1,6 +1,7 @@
 const path = require('path');
 
 module.exports = {
+  staticDirs: ['@assets'],
   stories: ['../src/**/**/*.stories.mdx', '../src/**/**/*.stories.@(js|jsx|ts|tsx)'],
   addons: [
     '@storybook/addon-links',
@@ -21,11 +22,40 @@ module.exports = {
   ],
   framework: '@storybook/react',
   webpackFinal: async (config) => {
-    config.module.rules.push({
-      test: /\.scss$/,
-      use: ['style-loader', 'css-loader', 'sass-loader'],
-      include: path.resolve(__dirname, '../src/styles')
-    });
+    config.resolve.alias = {
+      ...config.resolve.alias,
+      '@': path.resolve(__dirname, '../src'),
+      '@components': path.resolve(__dirname, '../src/components'),
+      '@pages': path.resolve(__dirname, '../src/pages'),
+      '@redux': path.resolve(__dirname, '../src/redux'),
+      '@hooks': path.resolve(__dirname, '../src/hooks'),
+      '@templates': path.resolve(__dirname, '../src/templates'),
+      '@organisms': path.resolve(__dirname, '../src/organisms'),
+      '@contexts': path.resolve(__dirname, '../src/contexts'),
+      '@styles': path.resolve(__dirname, '../src/styles'),
+      '@assets': path.resolve(__dirname, '../src/assets')
+    };
+
+    config.module.rules.push(
+      {
+        test: /\.scss$/,
+        use: ['style-loader', 'css-loader', 'sass-loader'],
+        include: path.resolve(__dirname, '../src/styles')
+      },
+      {
+        test: /\.(png|jpe?g|gif)$/i,
+        use: [
+          'file-loader',
+          {
+            loader: 'image-webpack-loader',
+            options: {
+              bypassOnDebug: true, // webpack@1.x
+              disable: true // webpack@2.x and newer
+            }
+          }
+        ]
+      }
+    );
 
     return {
       ...config,
@@ -34,12 +64,16 @@ module.exports = {
         ...config.resolve,
         alias: {
           ...config.resolve.alias,
-          '@styles': path.resolve(__dirname, '../src/styles/'),
-          '@components': path.resolve(__dirname, '../src/components/'),
-          '@services': path.resolve(__dirname, '../src/services/__mocks__'),
-          '@pages': path.resolve(__dirname, '../pages/'),
-          '@templates': path.resolve(__dirname, '../src/templates/'),
-          '@utils': path.resolve(__dirname, '../src/utils/')
+          '@': path.resolve(__dirname, '../src'),
+          '@components': path.resolve(__dirname, '../src/components'),
+          '@pages': path.resolve(__dirname, '../src/pages'),
+          '@redux': path.resolve(__dirname, '../src/redux'),
+          '@hooks': path.resolve(__dirname, '../src/hooks'),
+          '@templates': path.resolve(__dirname, '../src/templates'),
+          '@organisms': path.resolve(__dirname, '../src/organisms'),
+          '@contexts': path.resolve(__dirname, '../src/contexts'),
+          '@styles': path.resolve(__dirname, '../src/styles'),
+          '@assets': path.resolve(__dirname, '../src/assets')
         }
       }
     };

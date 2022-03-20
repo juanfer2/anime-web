@@ -1,47 +1,23 @@
-import { useState } from 'react';
-import Card from './components/Card';
-import logo from './logo.svg';
+import { BrowserRouter } from 'react-router-dom';
+import Layout from '@components/Layout';
+import Navbar from '@components/Navbar';
+import theme from '@styles/theme';
+import { ThemeProvider } from 'styled-components';
+import RoutesConfig from './routes';
 import './App.css';
 
 function App() {
-  const [count, setCount] = useState<number>(0);
-
   return (
-    <div className="App">
-      <Card />
-
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>Hello Vite + React!</p>
-        <p>
-          <button type="button" onClick={() => setCount((state) => state + 1)}>
-            count is: {count}
-          </button>
-        </p>
-        <p>
-          Edit YEah!!!! <code>App.tsx</code> and save to test HMR updates.
-        </p>
-        <p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-          {' | '}
-          <a
-            className="App-link"
-            href="https://vitejs.dev/guide/features.html"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Vite Docs
-          </a>
-        </p>
-      </header>
-    </div>
+    <BrowserRouter>
+      <ThemeProvider theme={theme}>
+        <Layout>
+          <Navbar />
+          <div className="main">
+            <RoutesConfig />
+          </div>
+        </Layout>
+      </ThemeProvider>
+    </BrowserRouter>
   );
 }
 

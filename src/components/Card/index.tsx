@@ -1,25 +1,28 @@
 import React from 'react';
+import styled from 'styled-components';
 
-function Card() {
+const ImageStyle = styled.div`
+  img {
+    height: 500px;
+    width: 200px;
+  }
+`;
+
+export interface CardI {
+  image: string;
+  title: string;
+}
+
+function Card({ image, title }: CardI) {
   return (
-    <div className="bg-indigo-500 max-w-sm rounded overflow-hidden shadow-lg">
-      <div className="px-6 py-4">
-        <div className="font-bold text-xl mb-2">The Coldest Sunset</div>
-        <p className="text-gray-700 text-base">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla!
-          Maiores et perferendis eaque, exercitationem praesentium nihil.
-        </p>
+    <div className="card md">
+      <div className="card-image">
+        <ImageStyle>
+          <img src={image} alt="card" className="object-cover rounded-xl" />
+        </ImageStyle>
       </div>
-      <div className="px-6 pt-4 pb-2">
-        <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
-          #photography
-        </span>
-        <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
-          #travel
-        </span>
-        <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
-          #winter
-        </span>
+      <div className="title">
+        <h6 className="orange-custom">{title}</h6>
       </div>
     </div>
   );
