@@ -2,14 +2,10 @@ import React from 'react';
 import { render } from '@testing-library/react';
 import ListCard from './index';
 
-const Props = {
-  
-};
+const Props = {};
 
 beforeEach(() => {
-	render(<ListCard {...Props} />);	
+  render(<ListCard {...Props} />);
 });
 
-xtest('Its rendering', () => {
-    
-});
+xtest('Its rendering', () => {});

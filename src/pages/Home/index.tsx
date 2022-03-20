@@ -11,10 +11,7 @@ function Home() {
       <Banner titleImage={TitleImage} image={ImageAnime} />
 
       <ListCard>
-        <Card
-          image="https://cdn.myanimelist.net/images/anime/1347/117616l.jpg"
-          title="Connected"
-        />
+        <Card image="https://cdn.myanimelist.net/images/anime/1347/117616l.jpg" title="Connected" />
         <Card image="https://cdn.myanimelist.net/images/anime/1446/118840l.jpg" title="Connected" />
         <Card image="https://cdn.myanimelist.net/images/anime/1576/119361l.jpg" title="Connected" />
         <Card image="https://cdn.myanimelist.net/images/anime/1106/111620l.jpg" title="Connected" />

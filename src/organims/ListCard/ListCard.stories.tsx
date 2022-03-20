@@ -4,7 +4,7 @@ import { Meta, ComponentStory } from '@storybook/react';
 
 export default {
   title: 'Components/ListCard',
-  component: ListCard,
+  component: ListCard
 } as Meta;
 
 const Story = (args: any) => <ListCard {...args} />;
