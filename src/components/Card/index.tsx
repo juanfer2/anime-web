@@ -2,9 +2,14 @@ import React from 'react';
 import styled from 'styled-components';
 
 const ImageStyle = styled.div`
+  max-width: 200px;
+  min-height: 300px;
+  overflow: hidden;
+
   img {
-    height: 500px;
     width: 200px;
+    height: 300px;
+    object-fit: cover;
   }
 `;
 

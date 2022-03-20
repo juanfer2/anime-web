@@ -26,7 +26,7 @@
       "@hooks/*": ["./src/hooks/*"],
       "@contexts/*": ["./src/contexts/*"],
       "@templates/*": ["./src/templates/*"],
-      "@organisms/*": ["./src/organisms/*"],
+      "@organims/*": ["./src/organims/*"],
       "@styles/*": ["./src/styles/*"],
       "@assets/*": ["./src/assets/*"],
     }
