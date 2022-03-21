@@ -9,6 +9,7 @@
 body {
   background: black;
   font-family: 'Noto Sans', sans-serif;
+  color: white;
 }
 
 code {
@@ -19,4 +20,8 @@ code {
 .main {
   padding-left: 50px;
   padding-right: 50px;
+}
+
+.swiper-slide {
+  /* width: auto !important; */
 }

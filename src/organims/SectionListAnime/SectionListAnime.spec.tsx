@@ -1,11 +1,11 @@
 import React from 'react';
 import { render } from '@testing-library/react';
-import SubTitle from './index';
+import SectionListAnime from './index';
 
 const Props = {};
 
 beforeEach(() => {
-  render(<SubTitle {...Props} />);
+  render(<SectionListAnime {...Props} />);
 });
 
 xtest('Its rendering', () => {});

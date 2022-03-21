@@ -1,11 +1,11 @@
 import React from 'react';
 import { render } from '@testing-library/react';
-import SubTitle from './index';
+import Carrousel from './index';
 
 const Props = {};
 
 beforeEach(() => {
-  render(<SubTitle {...Props} />);
+  render(<Carrousel {...Props} />);
 });
 
 xtest('Its rendering', () => {});
