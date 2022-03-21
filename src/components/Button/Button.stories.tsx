@@ -1,5 +1,5 @@
 import React from 'react';
-import Button, {ButtonI} from './';
+import Button, { ButtonI } from './';
 import { Meta, ComponentStory } from '@storybook/react';
 
 export default {
@@ -9,17 +9,19 @@ export default {
 
 const Story = (args: any) => <Button {...args} />;
 
-// 'primary' | 'secondary' | 'success' | 'danger' | 'default';
+// Default
 
 export const Default: ComponentStory<typeof Button> = Story.bind({});
 
 const props: ButtonI = {
-  children: <>Button</>,
+  children: 'Button',
   size: 'medium',
-  type: 'default'
-}
+  type: 'light',
+  rounded: false,
+  outline: false
+};
 
-const PropsDefault: ButtonI = {...props}
+const PropsDefault: ButtonI = { ...props };
 
 Default.args = PropsDefault;
 
