@@ -4,7 +4,7 @@ import { Meta, ComponentStory } from '@storybook/react';
 
 export default {
   title: 'Components/SubTitle',
-  component: SubTitle,
+  component: SubTitle
 } as Meta;
 
 const Story = (args: any) => <SubTitle {...args} />;

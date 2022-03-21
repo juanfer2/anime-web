@@ -1,6 +1,5 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
-const SubTitleStyled = styled.div`
-`;
+const SubTitleStyled = styled.div``;
 
 export { SubTitleStyled };

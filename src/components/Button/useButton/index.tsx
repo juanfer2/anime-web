@@ -3,12 +3,16 @@ export interface UseButtonI {
   type?: 'primary' | 'secondary' | 'success' | 'danger' | 'light';
   rounded?: boolean;
   outline?: boolean;
-  typeHtml?: "button" | "submit" | "reset";
+  typeHtml?: 'button' | 'submit' | 'reset';
 }
 
-export const useButton = ({ 
-  size, type, typeHtml, rounded = false, outline = true
-}: UseButtonI ) => {
+export const useButton = ({
+  size,
+  type,
+  typeHtml,
+  rounded = false,
+  outline = true
+}: UseButtonI) => {
   const defaultSize = 'medium';
   const defaultType = 'light';
   const defaultTypeHtml = 'button';

@@ -37,7 +37,7 @@ const fillCss = css<PropsI>`
 const ButtonStyled = styled.div<PropsI>`
   button {
     ${(props) => props.size === 'large' && sizeCss}
-    ${(props) => props.outline ? outlineCss : fillCss}
+    ${(props) => (props.outline ? outlineCss : fillCss)}
   }
 `;
 
