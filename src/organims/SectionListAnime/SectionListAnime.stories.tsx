@@ -4,7 +4,7 @@ import { Meta, ComponentStory } from '@storybook/react';
 
 export default {
   title: 'Components/SectionListAnime',
-  component: SectionListAnime,
+  component: SectionListAnime
 } as Meta;
 
 const Story = (args: any) => <SectionListAnime {...args} />;

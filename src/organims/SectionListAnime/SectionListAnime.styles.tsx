@@ -1,6 +1,5 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
-const SectionListAnimeStyled = styled.div`
-`;
+const SectionListAnimeStyled = styled.div``;
 
 export { SectionListAnimeStyled };

@@ -10,10 +10,10 @@ function Home() {
   return (
     <div>
       <Banner titleImage={TitleImage} image={ImageAnime} />
-      <SectionListAnime/>
-      <SectionListAnime/>
-      <SectionListAnime/>
-      <SectionListAnime/>
+      <SectionListAnime />
+      <SectionListAnime />
+      <SectionListAnime />
+      <SectionListAnime />
 
       {/*
       <ListCard>

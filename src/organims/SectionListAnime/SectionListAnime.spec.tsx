@@ -2,14 +2,10 @@ import React from 'react';
 import { render } from '@testing-library/react';
 import SectionListAnime from './index';
 
-const Props = {
-  
-};
+const Props = {};
 
 beforeEach(() => {
-	render(<SectionListAnime {...Props} />);	
+  render(<SectionListAnime {...Props} />);
 });
 
-xtest('Its rendering', () => {
-    
-});
+xtest('Its rendering', () => {});
