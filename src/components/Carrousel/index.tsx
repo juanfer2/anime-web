@@ -104,7 +104,7 @@ function Carrousel() {
       <Swiper
         spaceBetween={0}
         slidesPerView={1}
-        breakpoints= {{
+        breakpoints={{
           // when window width is >= 320px
           320: {
             slidesPerView: 1,
@@ -133,14 +133,13 @@ function Carrousel() {
             spaceBetween: 10
           }
         }}
-
         onSlideChange={() => console.log('slide change')}
-        onSwiper={(swiper) => console.log(swiper)}>
-        
-        {listItems && listItems.map((item: any) => (
-          <SwiperSlide key={item.name} > {item.component} </SwiperSlide>)
-        )}
-        
+        onSwiper={(swiper) => console.log(swiper)}
+      >
+        {listItems &&
+          listItems.map((item: any) => (
+            <SwiperSlide key={item.name}> {item.component} </SwiperSlide>
+          ))}
       </Swiper>
     </CarrouselStyled>
   );

@@ -16,7 +16,7 @@ const ImageStyle = styled.image`
 const CardStyled = styled.div`
   width: 200px;
   height: 300px;
-`
+`;
 
 export interface CardI {
   image: string;
@@ -30,7 +30,6 @@ function Card({ image }: CardI) {
           <img src={image} alt="card" className="object-cover rounded-xl" />
         </ImageStyle>
       </div>
-      
     </CardStyled>
   );
 }

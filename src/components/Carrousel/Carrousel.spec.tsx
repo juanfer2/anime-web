@@ -2,14 +2,10 @@ import React from 'react';
 import { render } from '@testing-library/react';
 import Carrousel from './index';
 
-const Props = {
-  
-};
+const Props = {};
 
 beforeEach(() => {
-	render(<Carrousel {...Props} />);	
+  render(<Carrousel {...Props} />);
 });
 
-xtest('Its rendering', () => {
-    
-});
+xtest('Its rendering', () => {});

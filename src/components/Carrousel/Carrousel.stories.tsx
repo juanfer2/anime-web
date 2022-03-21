@@ -4,7 +4,7 @@ import { Meta, ComponentStory } from '@storybook/react';
 
 export default {
   title: 'Components/Carrousel',
-  component: Carrousel,
+  component: Carrousel
 } as Meta;
 
 const Story = (args: any) => <Carrousel {...args} />;
