@@ -1,5 +1,5 @@
 import React from 'react';
-import ListCard from './';
+import ListCard from '.';
 import { Meta, ComponentStory } from '@storybook/react';
 
 export default {

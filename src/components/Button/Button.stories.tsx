@@ -1,5 +1,5 @@
 import React from 'react';
-import Button from './';
+import Button, {ButtonI} from './';
 import { Meta, ComponentStory } from '@storybook/react';
 
 export default {
@@ -9,8 +9,56 @@ export default {
 
 const Story = (args: any) => <Button {...args} />;
 
+// 'primary' | 'secondary' | 'success' | 'danger' | 'default';
+
 export const Default: ComponentStory<typeof Button> = Story.bind({});
 
-const Props = {};
+const props: ButtonI = {
+  children: <>Button</>,
+  size: 'medium',
+  type: 'default'
+}
 
-Default.args = Props;
+const PropsDefault: ButtonI = {...props}
+
+Default.args = PropsDefault;
+
+// Primary
+export const Primary: ComponentStory<typeof Button> = Story.bind({});
+
+const PropsPrimary: ButtonI = {
+  ...props,
+  type: 'primary'
+};
+
+Primary.args = PropsPrimary;
+
+// Secondary
+export const Secondary: ComponentStory<typeof Button> = Story.bind({});
+
+const PropsSecondary: ButtonI = {
+  ...props,
+  type: 'secondary'
+};
+
+Secondary.args = PropsSecondary;
+
+// Success
+export const Success: ComponentStory<typeof Button> = Story.bind({});
+
+const PropsSuccess: ButtonI = {
+  ...props,
+  type: 'success'
+};
+
+Success.args = PropsSuccess;
+
+// Danger
+export const Danger: ComponentStory<typeof Button> = Story.bind({});
+
+const PropsDanger: ButtonI = {
+  ...props,
+  type: 'danger'
+};
+
+Danger.args = PropsDanger;

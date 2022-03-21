@@ -30,7 +30,7 @@ module.exports = {
       '@redux': path.resolve(__dirname, '../src/redux'),
       '@hooks': path.resolve(__dirname, '../src/hooks'),
       '@templates': path.resolve(__dirname, '../src/templates'),
-      '@organisms': path.resolve(__dirname, '../src/organisms'),
+      '@organims': path.resolve(__dirname, '../src/organims'),
       '@contexts': path.resolve(__dirname, '../src/contexts'),
       '@styles': path.resolve(__dirname, '../src/styles'),
       '@assets': path.resolve(__dirname, '../src/assets')
@@ -70,7 +70,7 @@ module.exports = {
           '@redux': path.resolve(__dirname, '../src/redux'),
           '@hooks': path.resolve(__dirname, '../src/hooks'),
           '@templates': path.resolve(__dirname, '../src/templates'),
-          '@organisms': path.resolve(__dirname, '../src/organisms'),
+          '@organims': path.resolve(__dirname, '../src/organims'),
           '@contexts': path.resolve(__dirname, '../src/contexts'),
           '@styles': path.resolve(__dirname, '../src/styles'),
           '@assets': path.resolve(__dirname, '../src/assets')

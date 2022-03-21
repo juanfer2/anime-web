@@ -1,30 +1,31 @@
 import React from 'react';
-import { Container } from './styles';
+import { ButtonStyled } from './Button.styles';
+import { useButton } from './useButton'
 
 export interface ButtonI {
   children: React.ReactNode;
-  size: 'small' | 'medium' | 'large';
-  type: 'primary' | 'secondary' | 'success' | 'danger';
+  size?: 'small' | 'medium' | 'large';
+  type?: 'primary' | 'secondary' | 'success' | 'danger' | 'default';
 }
-
-const buttonSizes = {
-  small: 'w-24',
-  medium: 'w-50',
-  large: 'w-100'
-};
 
 function Button({ children, size, type }: ButtonI) {
+  const { sizeButton, typeButton, rounded, outline } = useButton({size, type})
+
   return (
-    <Container>
+    <ButtonStyled typeColor={typeButton} >
       <button
         type="button"
-        className={`${buttonSizes[size]} ${type} custon-button button-size outline outline-offset-2
-          outline-2 rounded-md`}
-      >
+        className={ `${sizeButton} ${typeButton} ${rounded} ${outline}`}
+      > 
         {children}
       </button>
-    </Container>
+    </ButtonStyled>
   );
 }
+
+Button.defaultProps = {
+  size: 'medium',
+  type: 'default'
+};
 
 export default Button;
