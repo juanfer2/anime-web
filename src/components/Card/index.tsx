@@ -1,5 +1,5 @@
 import React from 'react';
-import { CardStyled, ImageStyle } from './Card.styles'
+import { CardStyled, ImageStyle } from './Card.styles';
 
 export interface CardI {
   image: string;
