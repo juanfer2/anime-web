@@ -1,6 +1,7 @@
 import React from 'react';
 import { Route, Routes } from 'react-router-dom';
-import Home from '@pages/Home';
+import Home from '@/pages/Home';
+import Anime from '@/pages/Anime';
 
 interface PageI {
   name: string;
@@ -11,9 +12,19 @@ interface PageI {
 function RoutesConfig() {
   const pages: PageI[] = [
     {
-      name: 'register',
+      name: 'home',
       path: '/',
       element: <Home />
+    },
+    {
+      name: 'anime',
+      path: '/anime/:id',
+      element: <Anime />
+    },
+    {
+      name: 'notFount',
+      path: '*',
+      element: <>not found</>
     }
   ];
 

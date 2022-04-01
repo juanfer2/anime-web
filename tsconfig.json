@@ -19,16 +19,7 @@
       "jest"
     ],
     "paths": {
-      "@/*": ["./src/*"],
-      "@components/*": ["./src/components/*"],
-      "@pages/*": ["./src/pages/*"],
-      "@redux/*": ["./src/redux/*"],
-      "@hooks/*": ["./src/hooks/*"],
-      "@contexts/*": ["./src/contexts/*"],
-      "@templates/*": ["./src/templates/*"],
-      "@organims/*": ["./src/organims/*"],
-      "@styles/*": ["./src/styles/*"],
-      "@assets/*": ["./src/assets/*"],
+      "@/*": ["./src/*"]
     }
   },
   "include": ["src"],

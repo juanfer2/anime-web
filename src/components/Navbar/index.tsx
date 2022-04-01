@@ -1,5 +1,6 @@
 import React from 'react';
-import Logo from '@assets/images/logo.png';
+import { Link } from 'react-router-dom';
+import Logo from '@/assets/images/logo.png';
 import { Container } from './styles';
 
 export interface NavbarI {}
@@ -13,7 +14,9 @@ function Navbar() {
         <ul className="menu">
           <li>
             <div className="container-logo">
-              <img src={Logo} alt="logo" />
+              <Link to="/">
+                <img src={Logo} alt="logo" />
+              </Link>
             </div>
           </li>
 

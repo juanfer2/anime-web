@@ -1,5 +1,5 @@
 import '../src/index.css';
-import theme from '@styles/theme';
+import theme from '@/styles/theme';
 import { ThemeProvider } from 'styled-components';
 
 export const parameters = {

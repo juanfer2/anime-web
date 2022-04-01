@@ -1,22 +1,5 @@
 import React from 'react';
-import styled from 'styled-components';
-
-const ImageStyle = styled.image`
-  // max-width: 200px;
-  // min-height: 300px;
-  // overflow: hidden;
-
-  img {
-    width: 200px;
-    height: 300px;
-    object-fit: cover;
-  }
-`;
-
-const CardStyled = styled.div`
-  width: 200px;
-  height: 300px;
-`;
+import { CardStyled, ImageStyle } from './Card.styles'
 
 export interface CardI {
   image: string;

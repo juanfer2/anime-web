@@ -95,7 +95,7 @@ module.exports = (plop) => {
       },
       {
         type: 'add',
-        path: '../src/pages/{{properCase name}}/styles.tsx',
+        path: '../src/pages/{{properCase name}}/{{properCase name}}.styles.tsx',
         templateFile: 'component/styles.tsx.hbs'
       }
     ]
@@ -128,7 +128,7 @@ module.exports = (plop) => {
       },
       {
         type: 'add',
-        path: '../src/templates/{{properCase name}}/styles.tsx',
+        path: '../src/templates/{{properCase name}}/{{properCase name}}.styles.tsx',
         templateFile: 'component/styles.tsx.hbs'
       }
     ]

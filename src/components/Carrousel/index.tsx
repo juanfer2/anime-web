@@ -1,12 +1,14 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import Card from '@components/Card';
+import Card from '@/components/Card';
 import { CarrouselStyled } from './Carrousel.styles';
 
 export interface CarrouselI {}
 
 const listItems = [
   {
+    id: 1,
     name: 'card1',
     component: (
       <Card
@@ -16,7 +18,8 @@ const listItems = [
     )
   },
   {
-    name: 'card1',
+    id: 2,
+    name: 'card2',
     component: (
       <Card
         image="https://cdn.myanimelist.net/images/anime/1446/118840l.jpg"
@@ -25,7 +28,8 @@ const listItems = [
     )
   },
   {
-    name: 'card1',
+    id: 3,
+    name: 'card3',
     component: (
       <Card
         image="https://cdn.myanimelist.net/images/anime/1106/111620l.jpg"
@@ -34,7 +38,8 @@ const listItems = [
     )
   },
   {
-    name: 'card1',
+    id: 4,
+    name: 'card4',
     component: (
       <Card
         image="https://cdn.myanimelist.net/images/anime/1671/120628l.jpg"
@@ -43,7 +48,8 @@ const listItems = [
     )
   },
   {
-    name: 'card1',
+    id: 5,
+    name: 'card5',
     component: (
       <Card
         image="https://cdn.myanimelist.net/images/anime/1671/120628l.jpg"
@@ -52,7 +58,8 @@ const listItems = [
     )
   },
   {
-    name: 'card1',
+    id: 6,
+    name: 'card6',
     component: (
       <Card
         image="https://cdn.myanimelist.net/images/anime/1671/120628l.jpg"
@@ -61,7 +68,8 @@ const listItems = [
     )
   },
   {
-    name: 'card1',
+    id: 7,
+    name: 'card7',
     component: (
       <Card
         image="https://cdn.myanimelist.net/images/anime/1671/120628l.jpg"
@@ -70,7 +78,8 @@ const listItems = [
     )
   },
   {
-    name: 'card1',
+    id: 8,
+    name: 'card8',
     component: (
       <Card
         image="https://cdn.myanimelist.net/images/anime/1671/120628l.jpg"
@@ -79,7 +88,8 @@ const listItems = [
     )
   },
   {
-    name: 'card1',
+    id: 9,
+    name: 'card9',
     component: (
       <Card
         image="https://cdn.myanimelist.net/images/anime/1671/120628l.jpg"
@@ -88,7 +98,8 @@ const listItems = [
     )
   },
   {
-    name: 'card1',
+    id: 10,
+    name: 'card10',
     component: (
       <Card
         image="https://cdn.myanimelist.net/images/anime/1974/111954l.jpg"
@@ -138,7 +149,10 @@ function Carrousel() {
       >
         {listItems &&
           listItems.map((item: any) => (
-            <SwiperSlide key={item.name}> {item.component} </SwiperSlide>
+            <SwiperSlide key={item.name}>
+              {' '}
+              <Link to={`anime/${item.id}`}>{item.component} </Link>
+            </SwiperSlide>
           ))}
       </Swiper>
     </CarrouselStyled>

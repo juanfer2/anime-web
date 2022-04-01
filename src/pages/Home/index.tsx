@@ -1,31 +1,44 @@
-import React from 'react';
-// import Card from '@components/Card';
-import TitleImage from '@assets/images/black-clover-title.png';
-import ImageAnime from '@assets/images/black-clover.png';
-import Banner from '@components/Banner';
-import SectionListAnime from '@organims/SectionListAnime';
-// import ListCard from '@organims/ListCard';
+import React, { useState } from 'react';
+// import Card from '@/components/Card';
+import { AnimatePresence, motion } from 'framer-motion';
+import TitleImage from '@/assets/images/black-clover-title.png';
+import ImageAnime from '@/assets/images/black-clover.png';
+import SectionListAnime from '@/organims/SectionListAnime';
+import Categories from '@/organims/Categories';
+import Banner from '@/components/Banner';
+import { useHome } from './useHome';
+import Loading from '@/components/Loading';
+import { HomeStyled } from './Home.styles';
+import Button from '@/components/Button';
+// import ListCard from '@/organims/ListCard';
 
 function Home() {
-  return (
-    <div>
-      <Banner titleImage={TitleImage} image={ImageAnime} />
-      <SectionListAnime />
-      <SectionListAnime />
-      <SectionListAnime />
-      <SectionListAnime />
+  const [show, setShow] = useState<boolean>(true);
+  const { loadingGenres, error, list } = useHome();
 
-      {/*
-      <ListCard>
-        <Card image="https://cdn.myanimelist.net/images/anime/1347/117616l.jpg" title="Connected" />
-        <Card image="https://cdn.myanimelist.net/images/anime/1446/118840l.jpg" title="Connected" />
-        <Card image="https://cdn.myanimelist.net/images/anime/1576/119361l.jpg" title="Connected" />
-        <Card image="https://cdn.myanimelist.net/images/anime/1106/111620l.jpg" title="Connected" />
-        <Card image="https://cdn.myanimelist.net/images/anime/1671/120628l.jpg" title="Connected" />
-        <Card image="https://cdn.myanimelist.net/images/anime/1974/111954l.jpg" title="Connected" />
-      </ListCard>
-      */}
-    </div>
+  // if (loadingGenres) return <Loading visible />;
+  if (error) return <>error</>;
+
+  return (
+    // eslint-disable-next-line react/jsx-no-useless-fragment
+    <AnimatePresence initial={false}>
+      {loadingGenres ? (
+        <Loading visible={show} />
+      ) : (
+        <motion.div>
+          <Button onClick={() => setShow(!show)}>Click</Button>
+          <Loading visible={show} />
+
+          <Banner titleImage={TitleImage} image={ImageAnime} />
+
+          {list && <Categories subtitle="Categories" categories={list} />}
+          <SectionListAnime />
+          <SectionListAnime />
+          <SectionListAnime />
+          <SectionListAnime />
+        </motion.div>
+      )}
+    </AnimatePresence>
   );
 }
 

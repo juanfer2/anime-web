@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 const Container = styled.div`
+  z-index: 2;
   padding: 10px;
   position: fixed;
   overflow: hidden;
