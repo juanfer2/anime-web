@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import Card from '@components/Card';
 import { CarrouselStyled } from './Carrousel.styles';
-import { AnimeI } from '@/models/anime';
+import { AnimeI } from '@models/anime';
 
 export interface CarrouselI {}
 

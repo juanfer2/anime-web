@@ -9,7 +9,7 @@ import Loading from '@components/Loading';
 import AnimationPage from '@components/AnimationPage';
 import { useHome } from './useHome';
 import { HomeStyled } from './Home.styles';
-import { useAnimeFilter } from '@/hooks/useAnimeFilter';
+import { useAnimeFilter } from '@hooks/useAnimeFilter';
 
 function Home() {
   const { loadingGenres, error, list } = useHome();

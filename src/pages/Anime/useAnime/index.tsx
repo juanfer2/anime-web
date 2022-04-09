@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
-import { getAnimeById } from '@/services/anime/anime_service';
-import { AnimeI } from '@/models/anime';
+import { getAnimeById } from '@services/anime/anime_service';
+import { AnimeI } from '@models/anime';
 
 export interface Payload<T> {
   loading: boolean;

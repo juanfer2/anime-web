@@ -2,7 +2,7 @@ import React from 'react';
 import SubTitle from '@components/SubTitle';
 import Carrousel from '@components/Carrousel';
 import { SectionListAnimeStyled } from './SectionListAnime.styles';
-import { AnimeI } from '@/models/anime';
+import { AnimeI } from '@models/anime';
 
 export interface SectionListAnimeI {
   subtitle: string;

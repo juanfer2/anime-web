@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { getAnimeByFilter } from '@/services/anime/anime_service';
+import { getAnimeByFilter } from '@services/anime/anime_service';
 
 export interface UseAnimeFilterI {
   status: string;

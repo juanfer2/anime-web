@@ -1,10 +1,10 @@
 import React from 'react';
 import AnimationPage from '@components/AnimationPage';
 import { useParams } from "react-router-dom";
+import Loading from '@components/Loading';
+import Card from '@components/Card';
 import { AnimeStyled } from './Anime.styles';
 import { useAnime } from './useAnime';
-import Loading from '@/components/Loading';
-import Card from '@/components/Card';
 
 function Anime() {
   const params = useParams();

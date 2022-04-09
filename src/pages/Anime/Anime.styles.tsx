@@ -6,7 +6,6 @@ interface AnimePropsI {
 
 
 const AnimeStyled = styled.div`
-  // background-image: url(${(props) => props.image});
   /* Full height */
   height: 100vh;
 
@@ -35,3 +34,5 @@ const AnimeStyled = styled.div`
 `;
 
 export { AnimeStyled };
+
+  /* background-image: url(${(props) => props.image}); */
