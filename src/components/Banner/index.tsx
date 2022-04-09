@@ -25,6 +25,12 @@ function Banner({ titleImage, image }: BannerI) {
       <div className="right-content">
         <img src={image} alt="anime-banner" />
       </div>
+
+      <div className="watch_mobile">
+          <Button size="large" type="primary">
+            Ver ahora{' '}
+          </Button>
+        </div>
     </Container>
   );
 }

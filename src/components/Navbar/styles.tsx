@@ -11,6 +11,14 @@ const Container = styled.div`
   background: rgba(0, 0, 0, 0.25);
   backdrop-filter: blur(2px);
 
+  .items-navbar {
+    display: none;
+
+    @media (min-width: 600px) {
+      display: block;
+    }
+  }
+
   .content {
     display: flex;
     justify-content: space-between;

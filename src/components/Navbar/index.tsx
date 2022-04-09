@@ -22,7 +22,7 @@ function Navbar() {
 
           {listMenu &&
             listMenu.map((menuItem: string) => (
-              <li key={menuItem}>
+              <li key={menuItem} className='items-navbar'>
                 <span className="menu-item">{menuItem}</span>
               </li>
             ))}
