@@ -8,10 +8,18 @@ interface AnimePropsI {
 const AnimeStyled = styled.div`
   /** Flex */
   display: grid;
-  grid-template-columns: 0.5fr 1fr 0.3fr 1fr;
+  grid-template-columns: 1fr;
   gap: 1em;
-  justify-content: space-evenly;
-  grid-template-rows: auto;
+  align-items: center;
+
+  @media (min-width: 600px) {
+    display: grid;
+    grid-template-columns: 0.5fr 1fr 0.3fr 1fr;
+    gap: 1em;
+    justify-content: space-evenly;
+    grid-template-rows: auto;
+  }
+
   
   .content {
     display: flex;
