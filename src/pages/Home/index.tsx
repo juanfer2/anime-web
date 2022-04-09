@@ -13,6 +13,8 @@ import { HomeStyled } from './Home.styles';
 
 function Home() {
   const { loadingGenres, error, list } = useHome();
+  const { list: airingAnimes } = useAnimeFilter({status: 'airing'});
+  const { list: completeAnimes } = useAnimeFilter({status: 'complete'});
   const { list: upComingAnimes } = useAnimeFilter({status: 'upcoming'});
 
   if (loadingGenres) return <Loading />;
@@ -24,7 +26,8 @@ function Home() {
         <Banner titleImage={TitleImage} image={ImageAnime} />
 
         {list && <Categories subtitle="Categories" categories={list} />}
-        <SectionListAnime subtitle='Upcoming' animes={upComingAnimes} />
+        <SectionListAnime subtitle='Airing' animes={airingAnimes} />
+        <SectionListAnime subtitle='Complete' animes={completeAnimes} />
         <SectionListAnime subtitle='Upcoming' animes={upComingAnimes} />
       </HomeStyled>
     </AnimationPage>
