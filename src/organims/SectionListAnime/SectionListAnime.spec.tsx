@@ -1,6 +1,6 @@
 import React from 'react';
 import { render } from '@testing-library/react';
-import SectionListAnime from './index';
+import SectionListAnime from './';
 
 const Props = {};
 

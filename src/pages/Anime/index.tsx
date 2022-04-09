@@ -20,7 +20,7 @@ function Anime() {
   return (
     <AnimationPage>
       <AnimeStyled>
-        <Card image={anime?.image?.imageUrl || ''} />
+        <Card image={anime?.image?.largeImageUrl || ''} />
         <div className='content'>
           <div className="title">
             <h1>{anime?.title}</h1>
@@ -31,6 +31,16 @@ function Anime() {
           <div className="description">
             {anime?.synopsis}
           </div>
+        </div>
+        <div className="time-line" />
+        <div className="episodies">
+          <Card image={anime?.image?.largeImageUrl || ''} />
+          <Card image={anime?.image?.largeImageUrl || ''} />
+          <Card image={anime?.image?.largeImageUrl || ''} />
+          <Card image={anime?.image?.largeImageUrl || ''} />
+          <Card image={anime?.image?.largeImageUrl || ''} />
+          <Card image={anime?.image?.largeImageUrl || ''} />
+          <Card image={anime?.image?.largeImageUrl || ''} />
         </div>
       </AnimeStyled>
     </AnimationPage>
