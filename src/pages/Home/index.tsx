@@ -7,9 +7,9 @@ import Categories from '@organims/Categories';
 import Banner from '@components/Banner';
 import Loading from '@components/Loading';
 import AnimationPage from '@components/AnimationPage';
+import { useAnimeFilter } from '@hooks/useAnimeFilter';
 import { useHome } from './useHome';
 import { HomeStyled } from './Home.styles';
-import { useAnimeFilter } from '@hooks/useAnimeFilter';
 
 function Home() {
   const { loadingGenres, error, list } = useHome();
