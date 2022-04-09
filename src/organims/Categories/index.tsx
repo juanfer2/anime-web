@@ -1,7 +1,7 @@
 import React from 'react';
-import { GenresI } from '@/models/anime';
-import SubTitle from '@/components/SubTitle';
-import Button from '@/components/Button';
+import { GenresI } from '@models/anime';
+import SubTitle from '@components/SubTitle';
+import Button from '@components/Button';
 import { CategoriesStyled } from './Categories.styles';
 
 export interface CategoriesI {
@@ -10,8 +10,6 @@ export interface CategoriesI {
 }
 
 function Categories({ subtitle, categories }: CategoriesI) {
-  console.log(categories);
-
   return (
     <CategoriesStyled>
       <SubTitle subtitle={subtitle} />

@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
-import { GenresI } from '@/models/anime';
-import { getGenres } from '@/services/anime/anime_service';
+import { GenresI } from '@models/anime';
+import { getGenres } from '@services/anime/anime_service';
 
 export interface useGenres {
   loadingGenres: boolean;

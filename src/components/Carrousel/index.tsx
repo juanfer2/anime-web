@@ -1,8 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import Card from '@/components/Card';
+import Card from '@components/Card';
 import { CarrouselStyled } from './Carrousel.styles';
+import { AnimeI } from '@/models/anime';
 
 export interface CarrouselI {}
 
@@ -109,7 +110,7 @@ const listItems = [
   }
 ];
 
-function Carrousel() {
+function Carrousel({ animes }: { animes: any }) {
   return (
     <CarrouselStyled>
       <Swiper
@@ -147,11 +148,16 @@ function Carrousel() {
         onSlideChange={() => console.log('slide change')}
         onSwiper={(swiper) => console.log(swiper)}
       >
-        {listItems &&
-          listItems.map((item: any) => (
-            <SwiperSlide key={item.name}>
+        {animes &&
+          animes.map((item: AnimeI) => (
+            <SwiperSlide key={item.id}>
               {' '}
-              <Link to={`anime/${item.id}`}>{item.component} </Link>
+              <Link to={`anime/${item.id}`}>
+                <Card
+                  image={item.image.largeImageUrl}
+                  // title="Connected"
+                />
+              </Link>
             </SwiperSlide>
           ))}
       </Swiper>

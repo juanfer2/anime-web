@@ -1,8 +1,9 @@
 import React from 'react';
-import { AnimatePresence, motion } from 'framer-motion';
+import Logo from '@assets/images/logo.png';
 import { LoadingStyled } from './Loading.styles';
-import Logo from '@/assets/images/logo.png';
+import AnimationPage from '../AnimationPage';
 
+/*
 const boxAnimation = {
   key: 'box',
   initial: {
@@ -19,7 +20,7 @@ const boxAnimation = {
     y: '50%',
     opacity: 0,
     transition: {
-      duration: 5
+      duration: 0.5
     }
   },
   transition: {
@@ -27,21 +28,18 @@ const boxAnimation = {
     ease: 'easeOut'
   }
 };
+*/
 
-function Loading({ visible }: { visible: boolean }) {
+function Loading() {
   return (
-    <AnimatePresence initial={false}>
-      {visible && (
-        <motion.div {...boxAnimation}>
-          <LoadingStyled>
-            <img src={Logo} alt="logo" />
-            <div className="charge-container">
-              <div className="charge-content" />
-            </div>
-          </LoadingStyled>
-        </motion.div>
-      )}
-    </AnimatePresence>
+    <AnimationPage>
+      <LoadingStyled>
+        <img src={Logo} alt="logo" />
+        <div className="charge-container">
+          <div className="charge-content" />
+        </div>
+      </LoadingStyled>
+    </AnimationPage>
   );
 }
 

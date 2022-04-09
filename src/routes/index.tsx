@@ -1,7 +1,8 @@
 import React from 'react';
-import { Route, Routes } from 'react-router-dom';
-import Home from '@/pages/Home';
-import Anime from '@/pages/Anime';
+import { Route, Routes, useLocation } from 'react-router-dom';
+import { AnimatePresence } from 'framer-motion';
+import Home from '@pages/Home';
+import Anime from '@pages/Anime';
 
 interface PageI {
   name: string;
@@ -27,13 +28,16 @@ function RoutesConfig() {
       element: <>not found</>
     }
   ];
+  const location = useLocation();
 
   return (
-    <Routes>
-      {pages.map((component: any) => (
-        <Route key={component.name} path={component.path} element={component.element} />
-      ))}
-    </Routes>
+    <AnimatePresence exitBeforeEnter>
+      <Routes location={location} key={location.pathname}>
+        {pages.map((component: any) => (
+          <Route key={component.name} path={component.path} element={component.element} />
+        ))}
+      </Routes>
+    </AnimatePresence>
   );
 }
 
